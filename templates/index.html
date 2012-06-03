@@ -1,14 +1,8 @@
-<html>
-<head>
-</head>
-<body>
-  <form action="{{ url_for('user') }}" method="post">
-    <input type='text' name='name' placeholder='Name...'/>
-    <input type='text' name='email' placeholder='Email...'/>
-    <input type='submit'/>
-  </form>
-  {% for u in users %}
-    <p>{{ u.name }} -- {{ u.email }}</p>
-  {% endfor %}
-</body>
-</html>
+<form action="{{ url_for('user') }}" method="post">
+  <input type='text' name='name' placeholder='Name...'/>
+  <input type='text' name='email' placeholder='Email...'/>
+  <input type='submit'/>
+</form>
+{% for u in users %}
+  <p>{{ u.name }} -- {{ u.email }}</p>
+{% endfor %}
