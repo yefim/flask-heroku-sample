@@ -3,8 +3,14 @@ import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask.ext.sqlalchemy import SQLAlchemy
 
+username = os.environ.get('PG_USER')
+password = os.environ.get('PG_PASSWORD')
+dbhost = os.environ.get('PG_HOST')
+dbport = os.environ.get('PG_PORT')
+db = os.environ.get('PG_DATABASE')
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:////tmp/flask_app.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://'+username+':'+password+'@'+dbhost+':'+dbport+'/'+db
 db = SQLAlchemy(app)
 
 class User(db.Model):
