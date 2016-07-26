@@ -8,7 +8,10 @@ app = Flask(__name__)
 def coTamSlychacZielonyLudku():
   return "Hello all"
 
-@app.route('/goodbye')
-def index_bye():
-  return "good bye"
+
+################################################## its a well commneted line
+# and a well commented code
+#@app.route('/goodbye')
+#def index_bye():
+#  return "good bye"
 
