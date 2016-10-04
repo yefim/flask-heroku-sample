@@ -1,12 +1,12 @@
 import os
-
+// comment
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/costam')
 def costam():
-  return "costam"
+  return COSTAM
 
 @app.route('nowa_metoda')
 def nowa_metoda():
@@ -18,6 +18,7 @@ def hello():
 
 @app.route('foo')
 def foo():
+  c+_)(*&
   return 'barbar'
 
 
@@ -28,3 +29,9 @@ def yay():
 @app.route('/doit')
   return 'just DO IT!'
 
+def nieznampytona():
+  return "nie znam pythona"
+
+x = 100;
+
+COSTAM = 'costam'
