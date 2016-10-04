@@ -11,3 +11,7 @@ def hello():
 @app.route('/costam')
 def costam():
   return "costam"
+
+@app.route('/yay')
+def yay():
+  return "Nope."
