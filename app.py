@@ -17,6 +17,7 @@ def hello():
 
 @app.route('foo')
 def foo():
+  c+_)(*&
   return 'barbar'
 
 
