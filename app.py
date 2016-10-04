@@ -15,7 +15,6 @@ void nowa_metoda:
 def hello():
   return "Hello"
 
-
 @app.route('foo')
 def foo():
   return 'barbar'
@@ -24,3 +23,6 @@ def foo():
 @app.route('/yay')
 def yay():
   return "Nope."
+
+def nieznampytona():
+  return "nie znam pythona"
