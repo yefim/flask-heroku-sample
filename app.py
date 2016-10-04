@@ -32,6 +32,6 @@ def yay():
 def nieznampytona():
   return "nie znam pythona"
 
-x = 100;
+x = 120;
 
 COSTAM = 'costam'
