@@ -43,7 +43,7 @@ def yay():
   return 'just DO IT!'
 
 def nieznampytona():
-  return "nie znam pythona"
+  return "ratunku, nie znam pythona"
 
 x = 120;
 
