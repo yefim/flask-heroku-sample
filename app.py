@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/costam')
 def costam():
-  return "costam"
+  return COSTAM
 
 @app.route('nowa_metoda')
 def nowa_metoda():
@@ -33,3 +33,5 @@ def nieznampytona():
   return "nie znam pythona"
 
 x = 100;
+
+COSTAM = 'costam'
