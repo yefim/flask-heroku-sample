@@ -1,5 +1,5 @@
 import os
-// comment
+# comment
 from flask import Flask
 
 app = Flask(__name__)
@@ -18,6 +18,7 @@ def hello():
 
 @app.route('foo')
 def foo():
+"""
          __                              ___   __        .ama     ,
       ,d888a                          ,d88888888888ba.  ,88"I)   d
      a88']8i                         a88".8"8)   `"8888:88  " _a8'
@@ -32,6 +33,7 @@ def foo():
 `888a,.  ,aadd88888888888bma.   )88,  ,]I I8, .d' )88a8B ,d8 aI
   "888888PP"'        `8""""""8   "888PP'  `888P'  `88P"88P"8m"
 '
+"""
   return 'barbar'
 
 
@@ -45,6 +47,3 @@ def yay():
 def nieznampytona():
   return "ratunku, nie znam pythona"
 
-x = 120;
-
-COSTAM = 'costam'
