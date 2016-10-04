@@ -4,11 +4,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/costam')
+@app.route('/cosTam')
 def costam():
   return COSTAM
 
-@app.route('nowa_metoda')
+@app.route('nowaMetoda')
 def nowa_metoda():
 	return 'void'
 
@@ -41,9 +41,9 @@ def foo():
 def yay():
   return "Nope."
 
-@app.route('/doit')
+@app.route('/doIt')
   return 'just DO IT!'
 
-def nieznampytona():
+def nieZnamPytona():
   return "ratunku, nie znam pythona"
 
