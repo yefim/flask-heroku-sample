@@ -10,7 +10,7 @@ def costam():
 
 @app.route('nowa_metoda')
 def nowa_metoda():
-	return "void"
+	return 'void'
 
 @app.route('/')
 def hello():
