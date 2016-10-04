@@ -8,8 +8,9 @@ app = Flask(__name__)
 def costam():
   return "costam"
 
-void nowa_metoda:
-	return void
+@app.route('nowa_metoda')
+def nowa_metoda():
+	return "void"
 
 @app.route('/')
 def hello():
