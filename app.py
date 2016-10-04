@@ -31,3 +31,5 @@ def yay():
 
 def nieznampytona():
   return "nie znam pythona"
+
+x = 100;
