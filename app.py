@@ -25,5 +25,8 @@ def foo():
 def yay():
   return "Nope."
 
+@app.route('/doit')
+  return 'just DO IT!'
+
 def nieznampytona():
   return "nie znam pythona"
