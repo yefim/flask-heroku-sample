@@ -10,3 +10,4 @@ kkkk
 will_it_work==0.0
 pierwszy
 it_will==1.0
+nobleprog==10.2.2
