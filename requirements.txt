@@ -7,3 +7,4 @@ argparse==1.2.1
 gunicorn==0.14.3
 wsgiref==0.1.2
 kkkk
+will_it_work==0.0
