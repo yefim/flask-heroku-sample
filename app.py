@@ -1,33 +1,49 @@
 import os
-
-from flask import Flask, render_template, request, redirect, url_for
-from flask.ext.sqlalchemy import SQLAlchemy
+# comment
+from flask import Flask
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:////tmp/flask_app.db')
-db = SQLAlchemy(app)
 
-class User(db.Model):
-  id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String(100))
-  email = db.Column(db.String(100))
-  def __init__(self, name, email):
-    self.name = name
-    self.email = email
+@app.route('/cosTam')
+def costam():
+  return COSTAM
+
+@app.route('nowaMetoda')
+def nowa_metoda():
+	return 'void'
 
 @app.route('/')
-def index():
-  return render_template('index.html', users = User.query.all())
+def hello():
+  return "Hello"
 
-@app.route('/user', methods=['POST'])
-def user():
-  if request.method == 'POST':
-    u = User(request.form['name'], request.form['email'])
-    db.session.add(u)
-    db.session.commit()
-  return redirect(url_for('index'))
+@app.route('foo')
+def foo():
+"""
+         __                              ___   __        .ama     ,
+      ,d888a                          ,d88888888888ba.  ,88"I)   d
+     a88']8i                         a88".8"8)   `"8888:88  " _a8'
+   .d8P' PP                        .d8P'.8  d)      "8:88:baad8P'
+  ,d8P' ,ama,   .aa,  .ama.g ,mmm  d8P' 8  .8'        88):888P'
+ ,d88' d8[ "8..a8"88 ,8I"88[ I88' d88   ]IaI"        d8[         
+ a88' dP "bm8mP8'(8'.8I  8[      d88'    `"         .88          
+,88I ]8'  .d'.8     88' ,8' I[  ,88P ,ama    ,ama,  d8[  .ama.g
+[88' I8, .d' ]8,  ,88B ,d8 aI   (88',88"8)  d8[ "8. 88 ,8I"88[
+]88  `888P'  `8888" "88P"8m"    I88 88[ 8[ dP "bm8m88[.8I  8[
+]88,          _,,aaaaaa,_       I88 8"  8 ]P'  .d' 88 88' ,8' I[
+`888a,.  ,aadd88888888888bma.   )88,  ,]I I8, .d' )88a8B ,d8 aI
+  "888888PP"'        `8""""""8   "888PP'  `888P'  `88P"88P"8m"
+'
+"""
+  return 'barbar'
 
-if __name__ == '__main__':
-  db.create_all()
-  port = int(os.environ.get('PORT',5000))
-  app.run(host='0.0.0.0', port=port)
+
+@app.route('/yay')
+def yay():
+  return "Nope."
+
+@app.route('/doIt')
+  return 'just DO IT!'
+
+def nieZnamPytona():
+  return "ratunku, nie znam pythona"
+
