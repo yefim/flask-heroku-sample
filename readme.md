@@ -1,26 +1,22 @@
 Flask Heroku Sample
 ====================
 
-## Steps
+## Development Setup
 
-* Create Procfile with `web: gunicorn -b 0.0.0.0:$PORT app:app`
+* `virtualenv venv`
 
-* Run `virtualenv venv`
+* `source venv/bin/activate`
 
-* Run `source venv/bin/activate`
+* `pip install -r requirements.txt`
 
-* Run `pip install flask` (no sudo needed)
+## Deploy
 
-* Run `pip install gunicorn`
+* `heroku create`
 
-* Run `pip install flask-sqlalchemy`
+* `heroku addons:create heroku-postgresql:hobby-dev`
 
-* Run `pip freeze > requirements.txt`
+* `git push heroku master`
 
-* Add `psycopg2` to the end of requirements.txt
+## Contributors
 
-* Run `heroku create`
-
-* Run `heroku addons:create heroku-postgresql:hobby-dev`
-
-* Run `git push heroku master`
+* [Yefim](https://twitter.com/yefim)
