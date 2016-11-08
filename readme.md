@@ -19,6 +19,12 @@ Flask Heroku Sample
 
 * `git push heroku master`
 
+* `heroku run python`
+
+* `> from app import db`
+
+* `> db.create_all()`
+
 ## Contributors
 
 * [Yefim](https://twitter.com/yefim)
