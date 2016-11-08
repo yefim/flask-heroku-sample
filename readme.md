@@ -1,4 +1,8 @@
-###Steps
+Flask Heroku Sample
+====================
+
+## Steps
+
 * Create Procfile with `web: gunicorn -b 0.0.0.0:$PORT app:app`
 
 * Run `virtualenv venv`
@@ -15,7 +19,7 @@
 
 * Add `psycopg2` to the end of requirements.txt
 
-* Run `heroku create --stack cedar`
+* Run `heroku create`
 
 * Run `heroku addons:add shared-database`
 
