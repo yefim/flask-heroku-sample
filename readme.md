@@ -1,6 +1,8 @@
 Flask Heroku Sample
 ====================
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Development Setup
 
 * `virtualenv venv`
