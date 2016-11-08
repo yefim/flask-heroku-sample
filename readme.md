@@ -21,7 +21,6 @@ Flask Heroku Sample
 
 * Run `heroku create`
 
-* Run `heroku addons:add shared-database`
+* Run `heroku addons:create heroku-postgresql:hobby-dev`
 
 * Run `git push heroku master`
-
