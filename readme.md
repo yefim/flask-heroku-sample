@@ -11,6 +11,8 @@ Flask Heroku Sample
 
 * `pip install -r requirements.txt`
 
+* `python app.py`
+
 ## Deploy
 
 * `heroku create`

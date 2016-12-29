@@ -20,22 +20,20 @@ class User(db.Model):
     self.name = name
     self.email = email
 
-db.create_all()
 
-
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
   return render_template('index.html', users=User.query.all())
 
 
 @app.route('/user', methods=['POST'])
 def user():
-  if request.method == 'POST':
-    u = User(request.form['name'], request.form['email'])
-    db.session.add(u)
-    db.session.commit()
+  u = User(request.form['name'], request.form['email'])
+  db.session.add(u)
+  db.session.commit()
   return redirect(url_for('index'))
 
 if __name__ == '__main__':
+  db.create_all()
   port = int(os.environ.get('PORT', 5000))
   app.run(host='0.0.0.0', port=port, debug=True)
