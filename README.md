@@ -13,6 +13,10 @@ A simple Python Flask example application that's ready to run on Heroku.
 
 * `python app.py`
 
+## Screenshot
+
+![screenshot](https://i.imgur.com/wf74fxY.png)
+
 ## Deploy
 
 * `heroku create`
