@@ -21,6 +21,8 @@ A simple Python Flask example application that's ready to run on Heroku.
 
 * `git push heroku master`
 
+* Note: make sure you run `db.create_all()` to create the tables.
+
 ## Contributors
 
 * [Yefim](https://twitter.com/yefim)
