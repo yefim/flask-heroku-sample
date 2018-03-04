@@ -1,13 +1,15 @@
 {% extends "layout.html" %}
 
 {% block body %}
+  <h1>Add a user</h1>
   <form action="{{ url_for('user') }}" method="post">
     <label for="name">Name</label>
-    <input id="name" type="text" name="name" placeholder="John Smith"/>
+    <input id="name" type="text" name="name" placeholder="John Smith" required />
     <label for="email">Email</label>
-    <input id="email" type="text" name="email" placeholder="j.smith@example.com"/>
+    <input id="email" type="email" name="email" placeholder="j.smith@example.com" required />
     <button type="submit">Save</button>
   </form>
+  <h2>List of users</h2>
   {% for u in users %}
     <p>{{ u.name }} -- {{ u.email }}</p>
   {% endfor %}

@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 20px;
+  width: 1200px;
+}
+
+label,
+input,
+button {
+  display: block;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  width: 100%;
+}
+
+form {
+  border: 1px solid #444;
+  max-width: 100%;
+  padding: 20px;
+  width: 400px;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  padding: 4px 0;
+}
+
+button:hover {
+  background: #444;
+  color: #fff;
+}
