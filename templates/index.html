@@ -1,6 +1,8 @@
 <form action="{{ url_for('user') }}" method="post">
-  <input type="text" name="name" placeholder="Name..."/>
-  <input type="text" name="email" placeholder="Email..."/>
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" placeholder="John Smith"/>
+  <label for="email">Email</label>
+  <input id="email" type="text" name="email" placeholder="j.smith@example.com"/>
   <button type="submit">Save</button>
 </form>
 {% for u in users %}
