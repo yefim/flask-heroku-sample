@@ -7,11 +7,9 @@ A simple Python Flask example application that's ready to run on Heroku.
 
 ## Development Setup
 
-* `virtualenv venv`
+* `pipenv install`
 
-* `source venv/bin/activate`
-
-* `pip install -r requirements.txt`
+* `pipenv shell`
 
 * `python app.py`
 
