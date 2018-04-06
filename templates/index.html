@@ -12,5 +12,7 @@
   <h2>List of users</h2>
   {% for u in users %}
     <p>{{ u.name }} -- {{ u.email }}</p>
+  {% else %}
+    <p>No users found in the db. You can make some above.</p>
   {% endfor %}
 {% endblock %}
