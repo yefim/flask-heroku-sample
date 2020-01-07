@@ -1,0 +1,11 @@
+-i https://pypi.python.org/simple
+click==7.0
+flask-sqlalchemy==2.4.1
+flask==1.1.1
+gunicorn==20.0.4
+itsdangerous==1.1.0
+jinja2==2.10.3
+markupsafe==1.1.1
+psycopg2==2.8.4
+sqlalchemy==1.3.12
+werkzeug==0.16.0

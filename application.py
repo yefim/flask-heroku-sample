@@ -3,12 +3,12 @@ import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////tmp/flask_app.db')
+DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////tmp/flask_application.db')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
-db = SQLAlchemy(app)
+application.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+db = SQLAlchemy(application)
 
 
 class User(db.Model):
@@ -21,12 +21,12 @@ class User(db.Model):
     self.email = email
 
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 def index():
   return render_template('index.html', users=User.query.all())
 
 
-@app.route('/user', methods=['POST'])
+@application.route('/user', methods=['POST'])
 def user():
   u = User(request.form['name'], request.form['email'])
   db.session.add(u)
@@ -36,4 +36,4 @@ def user():
 if __name__ == '__main__':
   db.create_all()
   port = int(os.environ.get('PORT', 5000))
-  app.run(host='0.0.0.0', port=port, debug=True)
+  application.run(host='0.0.0.0', port=port, debug=True)
